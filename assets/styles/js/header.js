@@ -55,6 +55,7 @@ function pauseAudio() {
 async function retrieveSongsFromServer() {
   await fetch("audio.json")
     .then((response) => {
+      console.log(response);
       if (!response.ok) {
         throw new Error("Сервер не отвечает");
       }
