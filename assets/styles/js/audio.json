@@ -1,0 +1,29 @@
+{
+    "songs": [
+        {
+            "title": "Melody Of Nature by Zakhar Valaha",
+            "audio": "assets/music/melody-of-nature.mp3",
+            "cover": "assets/music/melody-of-nature.jpg"
+        },
+        {
+            "title": "Moonlight by Scott Buckley",
+            "audio": "assets/music/moonlight.mp3",
+            "cover": "assets/music/moonlight.jpg"
+        },
+        {
+            "title": "Downpour by Keys of Moon",
+            "audio": "assets/music/downpour.mp3",
+            "cover": "assets/music/downpour.jpg"
+        },
+        {
+            "title": "Starlit Beach by Purrple Cat",
+            "audio": "assets/music/starlit-beach.mp3",
+            "cover": "assets/music/starlit-beach.jpg"
+        },
+        {
+            "title": "Winter by Alex-Productions",
+            "audio": "assets/music/winter.mp3",
+            "cover": "assets/music/winter.jpg"
+        }
+    ]
+}

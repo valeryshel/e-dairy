@@ -53,7 +53,7 @@ function pauseAudio() {
 
 //загрузка песен
 async function retrieveSongsFromServer() {
-  await fetch("../../../audio.json")
+  await fetch("audio.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Сервер не отвечает");
