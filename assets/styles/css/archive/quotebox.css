@@ -1,0 +1,47 @@
+.quote_box {
+    background-image: url(/assets/pictures/quote.png);
+    background-size: cover;
+    width: auto;
+    height: 200px;
+    top: 450px;
+    display: flex;
+    justify-content: center;
+    padding: 10px, 20px, 50px, 20px;
+    flex-direction: column;
+    align-content: space-between
+}
+
+.quote_container {
+    width: 180px;
+    height: 40px;
+    gap: 0px;
+    border-radius: 15px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    margin-left: 85px;
+
+}
+
+.quote_header {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.29px;
+    text-align: center;
+    justify-content: center;
+}
+
+.quote_phrase {
+    width: 300px;
+    /*height: 200px;*/
+    padding-left: 30px;
+    padding-top: 15px;
+    text-align: center;
+    align-items: center;
+
+
+}

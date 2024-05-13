@@ -1,0 +1,80 @@
+
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+padding-top: 20px;
+    height: auto;
+
+
+  }
+.todoList__Create{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+  .resultTask{
+    flex-direction: column;
+    font-size: 20px;
+    margin-left: -12px;
+    background-color: #EDCCC8;
+
+
+  }
+  .elementsTaskLi{
+    width: 93%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Располагает элементы по краям */
+    align-items: center; /* Центрирует вертикально */
+    border-radius: 5px;
+  
+  }
+  
+
+
+
+.spanList {
+    padding-right: 20px;
+    max-width: 70%;
+
+}
+.btn-action{
+    background-color: #EDCCC8;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+  #taskInput{
+    width: 95%;
+  }
+
+  #addButton,#clearButton{
+    width: 130px;
+  }
+
+.done,.delete{
+    padding: 5px;
+    border-radius: 5px;
+  
+}
+
+
+#clearButtonTask:disabled{
+  background-color: grey;
+
+}
+
+  .completed {
+    text-decoration: line-through;
+  }
+
+  .nonexisttask{
+
+    text-align: start;
+    font-size: 15px;
+
+  }
+

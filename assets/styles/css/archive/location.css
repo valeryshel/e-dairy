@@ -1,0 +1,24 @@
+.mymap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+.mapcontainer {
+    text-align: center;
+    padding: 30px;
+
+    width: 400px;
+}
+.buttonGeo {
+
+    border-radius: 15px;
+    color: #624343;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#map {
+    height: 230px;
+    width: 100%;
+}

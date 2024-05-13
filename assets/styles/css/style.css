@@ -1,0 +1,558 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("https://hb.bizmrg.com/fonts/montserrat/400.woff2") format("woff2"), url("https://hb.bizmrg.com/fonts/montserrat/400.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+html, body {
+  padding: 0;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr 0.7fr;
+  grid-template-rows: auto auto auto;
+  gap: 2px 2px;
+  grid-auto-flow: row;
+  grid-template-areas: "leftSidebar blog rightSidebar" "leftSidebar blog rightSidebar";
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #624343;
+}
+
+.leftSidebar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.35fr 0.35fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "about_me about_me about_me" "phrase phrase phrase" "todoList todoList todoList";
+  grid-area: leftSidebar;
+  background: linear-gradient(to right, #EBC9C6 0%, #EBDBE3 100%);
+  background-attachment: fixed;
+}
+.leftSidebar .about_me {
+  grid-area: about_me;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  padding: 5px;
+  padding-top: 60px;
+  height: auto;
+  width: auto;
+  background: linear-gradient(to right, #EBC9C6 0%, #EBDBE3 100%);
+}
+.leftSidebar .about_me #about_me_Img {
+  max-width: 120px;
+  width: 120px;
+  height: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  margin-left: 10px;
+  align-content: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.leftSidebar .phrase {
+  grid-area: phrase;
+  width: auto;
+}
+.leftSidebar .phrase .quote_box {
+  background-image: url(../../pictures/quote.png);
+  background-size: cover;
+  width: auto;
+  height: 200px;
+  top: 450px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px 50px 20px;
+  flex-direction: column;
+  align-content: space-between;
+}
+.leftSidebar .phrase .quote_container {
+  width: 180px;
+  height: 40px;
+  gap: 0px;
+  border-radius: 15px;
+  border: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  margin-left: 85px;
+}
+.leftSidebar .phrase .quote_header {
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18.29px;
+  text-align: center;
+  justify-content: center;
+  width: auto;
+}
+.leftSidebar .phrase .quote_phrase {
+  width: 300px;
+  /*height: 200px;*/
+  padding-left: 30px;
+  padding-top: 15px;
+  text-align: center;
+  align-items: center;
+}
+.leftSidebar .todoList {
+  width: auto;
+  grid-area: todoList;
+  background-color: #EDCCC8;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  height: auto;
+}
+.leftSidebar .todoList .todoList__Create {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.leftSidebar .todoList .buttonList {
+  display: flex;
+  flex-direction: row;
+}
+.leftSidebar .todoList .resultTask {
+  flex-direction: column;
+  font-size: 20px;
+  margin-left: -12px;
+  background-color: #EDCCC8;
+  width: auto;
+}
+.leftSidebar .todoList .resultTask .elementsTaskLi {
+  width: 93%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Располагает элементы по краям */
+  align-items: center; /* Центрирует вертикально */
+  border-radius: 5px;
+}
+.leftSidebar .todoList .resultTask .spanList {
+  padding-right: 20px;
+  max-width: 70%;
+}
+.leftSidebar .todoList .resultTask .btn-action {
+  background-color: #EDCCC8;
+  border: none;
+  border-radius: 5px;
+}
+.leftSidebar .todoList .resultTask #taskInput {
+  width: 95%;
+}
+.leftSidebar .todoList .resultTask .done, .leftSidebar .todoList .resultTask .delete {
+  padding: 5px;
+  border-radius: 5px;
+}
+.leftSidebar .todoList #addButton, .leftSidebar .todoList #clearButton {
+  width: 130px;
+}
+.leftSidebar .todoList #clearButtonTask:disabled {
+  background-color: grey;
+}
+.leftSidebar .todoList .completed {
+  text-decoration: line-through;
+}
+.leftSidebar .todoList .nonexisttask {
+  text-align: start;
+  font-size: 15px;
+}
+
+.rightSidebar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.35fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "weather weather weather" "mymap mymap mymap" "catPicture catPicture catPicture";
+  grid-area: rightSidebar;
+  background: linear-gradient(to right, #DFD3DB 0%, #FDEBE6 100%);
+  background-attachment: fixed;
+}
+.rightSidebar .weather {
+  grid-area: weather;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  /*background-image: url(/assets/pictures/weather_background.png);*/
+}
+.rightSidebar .weather #inputDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+}
+.rightSidebar .weather #inputSearchCity {
+  flex: 1; /* Используйте flex: 1, чтобы блоки распределились по ширине */
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.rightSidebar .weather #searchWeatherButton {
+  flex: 1;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  height: 37px;
+}
+.rightSidebar .weather #cityName {
+  padding-top: 10px;
+}
+.rightSidebar .weather #cityMain {
+  padding-bottom: 10px;
+}
+.rightSidebar .weather #resultWeather {
+  width: 230px;
+  height: auto;
+  background-color: #FDEBE6;
+  border-radius: 15px;
+}
+.rightSidebar .weather .weather__description {
+  padding-left: 10px;
+  font-size: 20px;
+}
+.rightSidebar .weather #cityTemp {
+  font-size: 50px;
+  width: 200px;
+  margin-left: 20px;
+}
+.rightSidebar .weather .weatherDetails {
+  display: flex;
+  align-items: center;
+  height: 30%;
+}
+.rightSidebar .weather .imageWeather {
+  width: 100px;
+  margin-right: 80px;
+  margin-bottom: 10px;
+}
+.rightSidebar .weather #searchWeatherButton:disabled {
+  background-color: grey;
+}
+.rightSidebar .catPicture {
+  grid-area: catPicture;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  height: auto;
+}
+.rightSidebar .catPicture .catImgWrapper {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+.rightSidebar .catPicture .catImg {
+  width: auto;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.mymap {
+  grid-area: mymap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+.mymap .mapcontainer {
+  text-align: center;
+  align-items: center;
+  padding: 30px;
+  width: 400px;
+}
+.mymap .buttonGeo {
+  justify-content: center;
+  border-radius: 15px;
+  color: #624343;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.mymap #map {
+  height: 230px;
+  width: 100%;
+}
+
+.blog_main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "." "." ".";
+  grid-area: blog;
+  background-image: url("../../pictures/blogBackground.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  border-left: 1px solid #B83E3E;
+  border-right: 1px solid #B83E3E;
+  background-attachment: fixed;
+}
+.blog_main .blog {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 0 auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: auto;
+  margin-top: 20px;
+}
+.blog_main .inputPostDiv {
+  display: flex;
+  flex-direction: row;
+}
+.blog_main #resultBlog {
+  margin-left: 10px;
+  text-align: justify;
+  height: auto;
+}
+.blog_main #createPostButton:hover, .blog_main #clearPostButton:hover, .blog_main #createPostButton:hover, .blog_main #clearPostButton:hover {
+  border-radius: 10px;
+}
+.blog_main #createPostButton:disabled, .blog_main #clearPostButton:disabled {
+  background-color: grey;
+}
+.blog_main #error {
+  color: #624343;
+}
+.blog_main #imageBlog {
+  width: 100px;
+}
+
+.input {
+  width: 280px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.button {
+  height: 40px;
+  width: 180px;
+  border: 1px solid #B83E3E;
+  font-size: 15px;
+  background-color: transparent;
+  border-radius: 15px;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.button:hover {
+  background-color: #B83E3E;
+  color: white;
+}
+
+.header {
+  height: 200px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  background-image: url(../../pictures/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #B83E3E;
+}
+
+#aboutproject {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 35px;
+  flex-direction: column;
+}
+
+#projecttext {
+  color: #624343;
+  font-size: 15px;
+  width: 40vw;
+}
+
+.btnabout {
+  background: none;
+  border: 1px solid #B83E3E;
+  border-radius: 15px;
+  font-size: 15px;
+  color: #624343;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 180px;
+  height: 40px;
+  vertical-align: center;
+}
+
+.btnabout:hover {
+  background-color: #B83E3E;
+  color: white;
+}
+
+#music::after, #music::before {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#music:root {
+  --transition: all 200ms cubic-bezier(0.74, 0.01, 0.39, 0.96);
+}
+
+.music {
+  display: grid;
+  place-items: center;
+}
+
+.music___container {
+  display: grid;
+  grid-gap: 5px;
+  margin: 1rem;
+  position: relative;
+  z-index: 10;
+  max-width: 400px;
+  min-width: 25vw;
+}
+
+.music___title {
+  margin: -0.3rem;
+  color: #624343;
+  background-color: transparent;
+  padding: 0.3rem;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #B83E3E;
+  text-align: center;
+}
+
+.music___image {
+  /*background-image: url(./pic/meiying-ng-OrwkD-iWgqg-unsplash.jpg);*/
+  background-size: cover;
+  background-position: center center;
+  height: 10vh;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.music___player {
+  background-color: #FDEBE6;
+  border: 1px solid #B83E3E;
+  max-width: 250px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px #B83E3E;
+  margin: -1rem auto 0;
+  padding: 0.1rem 1rem;
+  position: relative;
+  z-index: initial;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  place-items: center;
+  grid-gap: 1rem;
+  transition: all 200ms cubic-bezier(0.74, 0.01, 0.39, 0.96);
+}
+
+.music___player.playing {
+  border-radius: 0 0 10px 10px;
+}
+
+.action {
+  background-color: transparent;
+  color: #B83E3E;
+  font-size: 1.5rem;
+  border: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.action:is(:hover, :focus) {
+  color: white;
+  outline: none;
+  transition: all 200ms cubic-bezier(0.74, 0.01, 0.39, 0.96);
+}
+
+.music___player--progress {
+  position: absolute;
+  z-index: -1;
+  height: 5px;
+  width: 100%;
+  top: -10%;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 10px 10px 10px 10px;
+  border-bottom: 1px solid #B83E3E;
+  transform: translateY(120%);
+  transition: all 200ms cubic-bezier(0.74, 0.01, 0.39, 0.96);
+  cursor: pointer;
+}
+
+.music___player.playing .music___player--progress {
+  transform: translateY(0);
+  z-index: 0;
+}
+
+.progress {
+  position: absolute;
+  background-color: #B83E3E;
+  width: 0%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.speed {
+  position: absolute;
+  height: 2rem;
+  font-size: 10px;
+  font-family: inherit;
+  color: #624343;
+  border: 1px solid #B83E3E;
+  background-color: #FDEBE6;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: grid;
+  place-items: center;
+  padding: 0.2rem 1rem 0.5rem;
+  border-radius: 0 0 10px 10px;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.speed:is(:hover, :focus) {
+  color: white;
+  background-color: #B83E3E;
+  border: 1px solid #FDEBE6;
+  outline: none;
+  transition: all 200ms cubic-bezier(0.74, 0.01, 0.39, 0.96);
+}
+
+.music___player.playing .speed {
+  transform: translate(-50%, 70%);
+}
+
+.titleH1 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.titleH2 {
+  margin-left: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

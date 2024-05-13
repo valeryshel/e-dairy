@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/pictures/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/styles/css/style.css" />
+
+    <link rel="stylesheet" href="assets/styles/css/normalize.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <title>Blog</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div id="aboutproject">
+        <button
+          class="btnabout"
+          id="btnabout"
+          onclick="document.getElementById('projecttext').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus placeat veritatis sit dolorem omnis aliquid veniam? Quaerat atque provident earum vel delectus nisi est deserunt. Et impedit deleniti quam quisquam.'"
+        >
+          О нашем проекте
+        </button>
+        <p id="projecttext"></p>
+      </div>
+      <div id="music" class="music">
+        <div class="music___container">
+          <audio id="audio"></audio>
+          <p class="music___title">happy song</p>
+          <div class="music___image"></div>
+          <div class="music___player">
+            <div class="music___player--progress">
+              <div class="progress"></div>
+            </div>
+            <button id="prev" class="action">
+              <i class="ph ph-skip-back-circle"></i>
+            </button>
+            <button id="play" class="action">
+              <i class="ph ph-play-circle"></i>
+            </button>
+            <button id="next" class="action">
+              <i class="ph ph-skip-forward-circle"></i>
+            </button>
+            <button class="speed">1.0x</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="leftSidebar">
+        <div class="about_me" id="about_me">
+          <img
+            id="about_me_Img"
+            src="assets/pictures/about_me.jpeg"
+            alt="Мое фото"
+          />
+          <div id="about_meDescription">
+            <p class="about_me" id="error__about_me"></p>
+          </div>
+        </div>
+        <div class="phrase">
+          <div class="quote_box">
+            <div id="quoteOfTheDay" class="quote_container">
+              <h1 class="titleH1">Цитата дня</h1>
+            </div>
+            <div class="quote_phrase">
+              <p id="quote"></p>
+            </div>
+          </div>
+        </div>
+        <div class="todoList">
+          <h1 class="titleH1" id="h1Text">Мой список дел</h1>
+          <div class="todoList__Create">
+            <h2 class="titleH2">Добавить задачу</h2>
+            <input
+              class="input"
+              type="text"
+              id="taskInput"
+              placeholder="Введите задачу"
+            />
+            <div class="buttonList">
+              <button class="button" id="addButton">Добавить</button>
+              <button class="button" id="clearButtonTask">
+                Очистить список задач
+              </button>
+            </div>
+            <p id="errorTask"></p>
+          </div>
+          <div class="resultTask">
+            <ul id="taskList"></ul>
+          </div>
+        </div>
+      </div>
+      <main class="blog_main">
+        <div class="blog">
+          <h1 class="titleH1">Мой блог</h1>
+          <div id="newPost">
+            <h2 class="titleH2">Новый пост</h2>
+            <div class="inputPostDiv">
+              <input
+                class="input"
+                type="text"
+                name="title"
+                id="titleInput"
+                placeholder="Заголовок"
+              />
+              <input
+                class="input"
+                type="text"
+                name="descriptions"
+                id="textInput"
+                placeholder="Текст поста"
+              />
+            </div>
+
+            <div class="buttonPost">
+              <button class="button" id="createPostButton">Создать пост</button>
+              <button class="button" id="clearPostButton">
+                Удалить все посты
+              </button>
+            </div>
+            <p id="errorPost"></p>
+          </div>
+          <div id="resultBlog"></div>
+        </div>
+      </main>
+      <div class="rightSidebar">
+        <div class="weather">
+          <div id="inputDiv">
+            <input
+              type="text"
+              name="inputSearchCity"
+              class="form input"
+              id="inputSearchCity"
+              placeholder="Введите город"
+            />
+            <button class="button" id="searchWeatherButton">Найди</button>
+          </div>
+          <p class="error" id="errorInput"></p>
+          <div class="sectionWeather" id="resultWeather">
+            <p id="errorWeather"></p>
+          </div>
+        </div>
+        <div class="mymap">
+          <div class="mapcontainer">
+            <button id="findLocation" class="button buttonGeo">
+              Мое местоположение
+            </button>
+            <div class="location-container" style="display: none">
+              <div id="map"></div>
+              <div id="address"></div>
+              <button onclick="location.reload()" class="button buttonGeo">
+                Проверить снова
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="catPicture">
+          <h1 class="titleH1">Поcмотреть на рандомного котика</h1>
+          <button class="button buttonAddCat"></button>
+          <div class="catImgWrapper"></div>
+        </div>
+      </div>
+
+      <script src="assets/styles/js/index.js"></script>
+      <script src="assets/styles/js/about_me.js"></script>
+      <script src="assets/styles/js/weather.js"></script>
+      <script src="assets/styles/js/blog.js"></script>
+      <script src="assets/styles/js/todoList.js"></script>
+      <script src="assets/styles/js/location.js"></script>
+      <script src="./assets/styles/js/quotebox.js"></script>
+      <script src="./assets/styles/js/cat.js"></script>
+      <script src="./assets/styles/js/header.js"></script>
+    </div>
+  </body>
+</html>

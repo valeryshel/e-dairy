@@ -1,0 +1,24 @@
+
+.about_me{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding: 5px;
+    padding-top: 60px;
+    height: auto;
+    background: linear-gradient(#EBC9C6, #EBDBE3);
+}
+
+
+#about_me_Img{
+max-width: 120px;
+width: 120px;
+height: 120px;
+max-height: 120px;
+border-radius: 50%;
+margin-left: 10px;
+align-content: center;
+justify-content: center;
+margin-right: 10px;
+}

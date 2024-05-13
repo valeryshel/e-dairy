@@ -1,0 +1,83 @@
+
+.weather{
+margin-top: 20px;
+    margin-left:10% ;
+    margin-right: 10%;
+    /*background-image: url(/assets/pictures/weather_background.png);*/
+}
+#inputDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+}
+
+#inputSearchCity {
+    flex: 1; /* Используйте flex: 1, чтобы блоки распределились по ширине */
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#searchWeatherButton {
+    flex: 1;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    height: 37px;
+}
+
+#cityName{
+    padding-top: 10px;
+}
+#cityMain{
+    padding-bottom: 10px;
+}
+#resultWeather{
+   
+    width: 230px;
+    height: auto;
+    background-color:#FDEBE6 ;
+    border-radius: 15px;
+}
+
+.weather__description{   
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+#cityTemp {
+    font-size: 50px;
+    width: 200px;
+    margin-left: 20px;
+}
+
+/*#imageWeather {
+    float: right;
+    width: 100px;
+    margin-left: 10px;
+}*/
+.weatherDetails {
+    display: flex;
+    align-items: center;
+    height: 30%;
+}
+
+.imageWeather {
+    width: 100px;
+    margin-right: 80px;
+    margin-bottom: 10px;
+}
+
+
+
+#imageBlog{
+width: 100px;
+
+}
+
+#searchWeatherButton:disabled{
+    background-color: grey;
+  
+  }
